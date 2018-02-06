@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- CSS -->
+	<link rel='stylesheet' href='style/login.css'>
+
+	<!-- JavaScript -->
+	<% include ../partials/head %>
+		<script>
+			$(document).ready(function() {
+				console.log('login.ejs');
+				var SOCKET = io();
+				
+				$('#submit').click(function() {
+
+					var name = $('#username').val();
+					var role = $('input[name=role]:checked').val();
+					var pathType = $('select[name=path]').val();
+					var respTime = parseInt($('#resptime').val());
+
+					var dat = {'role':role,
+								'name':name,
+								'path':pathType,
+								'resp':respTime
+								};
+					console.log('dat',dat);
+
+					if (name == '' || role == undefined || respTime == '') {
+						alert('Please fill out all required form fields.')
+					} else {
+						SOCKET.emit('registerWorker', JSON.stringify(dat));
+					}
+					return false;
+				});
+
+				/*------------------------------------------------------------------
+				redirectWorker
+					Received when server acks client registerWorker
+				*/
+				SOCKET.on('redirectWorker', function(destination) {
+					window.location.href = destination;
+				});
+
+				/*------------------------------------------------------------------
+				alertMessage
+					Testing SOCKET connection
+				*/
+				SOCKET.on('alertMessage', function(msg) {
+					console.log(JSON.parse(msg));
+				});
+
+				/*------------------------------------------------------------------
+				currentWorkers
+					Display which workers are currently online
+				*/
+				SOCKET.on('currentWorkers', function(clients) {
+					console.log('Received currentWorkers');
+					document.getElementById('online-clients').innerHTML = JSON.stringify(clients, undefined, 2);
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+	<h1>login.ejs</h1>
+	<div id='main-box'>
+		<h1>Lightning Dodger Login</h1>
+		<h1>NextModelV3-2</h1>
+
+		<form>
+			<p>Enter a username:
+			<input type="text" placeholder="" id="username"><br/>
+			<p>Select your role:
+			<input type="radio" name="role" value="agent"> Agent
+			<input type="radio" name="role" value="adver"> Adversary
+			<p>Path Type:
+			<select name="path">
+			  <option value="open">Open</option>
+			  <option value="fixed">Fixed</option>
+			  <option value="random">Random</option>
+			</select>
+			<p>Agent Response Time (ms):
+			<input type="text" placeholder="" id="resptime"><br/>
+			<p>
+			<input type="button" value="Submit" id="submit">
+		</form>
+
+		<a href="/game">Observe Game</a>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,242 @@
+html *
+{
+   font-family: Verdana, Geneva, sans-serif !important;
+}
+
+body {
+	background: gray;
+}
+
+h1 {
+	font-size: 14px;
+}
+
+#main-box {
+	background: darkgray;
+	display: block;
+	width: auto;
+	margin: 20px;
+	display: block;
+	float: left;
+	border-radius: 25px;
+}
+
+#game-box {
+	position: relative;
+	border: 1px solid black;
+	border-bottom: 10px solid black;
+	display: inline-block;
+	padding: 20px;
+	background: #feb;
+	width: auto;
+	height: auto;
+	border-radius: 25px;
+}
+
+#preview-box {
+	position: relative;
+	display: inline-block;
+	width: 520px;
+}
+
+#stat-box {
+	position: relative;
+	display: block;
+	border: 1px solid blue;
+	width: 0px auto;
+	height: 100px;
+	margin-bottom: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.stat-div {
+	position: relative;
+	display: inline-block;
+	float: left;
+	padding-top: 5px;
+	height: 95px;
+	font-size: 20px;
+}
+
+#move-box {
+	float: left;
+	width: 20%;
+	border-right: 1px solid blue;
+}
+
+.move_arrow {
+	margin-top: 5px;
+	height: 50px;
+}
+
+#score-box {
+	float: left;
+	width: 59%;
+	border-right: 1px solid blue;
+}
+
+#pts-total {
+	font-size: 50px;
+}
+
+#roundnum-box {
+	float: right;
+	width: 20%;
+}
+
+#round-num {
+	font-size: 50px;
+}
+
+#instr-box {
+	display: inline;
+	position:relative;
+	float: left;
+	margin-left: 10px;
+	padding: 20px;
+	width: 300px;
+	height: auto;
+	text-align: center;
+	color: white;
+}
+
+#alert-box {
+	text-align: center;
+	width: auto;
+	height: auto;
+	margin: 0px auto;
+	padding: 10px;
+	margin-top:25%;
+	position: absolute;
+}
+
+#struck-alert {
+	display: none;
+	position: relative;
+}
+
+#wrong {
+	width: 50%;
+}
+
+#map-box {
+	border: 1px solid black;
+	display: inline-block;
+	float: left;
+	height: 0px auto;
+	margin: 0px auto;
+	padding: 5px;
+	border-radius: 15px;
+
+    background: lightcyan; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(azure, lightcyan); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(azure, lightcyan);  For Opera 11.1 to 12.0 
+    background: -moz-linear-gradient(azure, lightcyan); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(azure, lightcyan); /* Standard syntax */
+}
+
+#count-box {
+	border: 1px solid blue;
+	display: inline-block;
+	width: 0px auto;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#count-bar {
+	width: 0px auto;
+	height: 30px;
+	border: 1px solid gray;
+	border-radius: 10px;
+}
+
+#round-box {
+	border: 1px solid blue;
+	width: 0px auto;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#round-bar {
+	width: 0px auto;
+	height: 30px;
+	border: 1px solid gray;
+	background: lightgreen;
+	border-radius: 10px;
+}
+
+.platform {
+	width: 20px;
+	height: 10px;
+	border: 1px solid gray;
+	border-bottom: 5px solid gray;
+	background: gainsboro;
+	border-radius: 15px;
+}
+
+.platform:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.row {
+	width: auto;
+	margin: 0px auto;
+	padding: 10px;
+	display: block;
+}
+
+.col {
+	width: 100px;
+	height: 50px;
+	display: inline-block;
+	margin: 5px;
+}
+
+.chars {
+	position: absolute;
+	height: 50px;
+}
+
+.arrow {
+	height: 30px;
+	left: 70px;
+	position: absolute;
+}
+
+#avatar {
+	top: -20px;
+	height:120%;
+	position: absolute;
+}
+
+#goal {
+	top: -20px;
+	height: 130%;
+	position: absolute;
+}
+
+#submit_mturk {
+	display: none;
+}
+
+.bolt {
+	top: -20px;
+	left: 50px;
+	height: 130%;
+	position: absolute;
+}
+
+.fog {
+	top: -20px;
+	height: 140%;
+	width: 110%;
+	background: white;
+	display: block;
+	position: relative;
+}

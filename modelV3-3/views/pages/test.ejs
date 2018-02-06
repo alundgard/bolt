@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- CSS -->
+	<link rel='stylesheet' href='style/style.css'>
+	<link rel='stylesheet' href='style/instruct.css'>
+
+	<!-- JavaScript -->
+	<% include ../partials/head %>
+	<script src='script/gup.js'></script>
+	<script src='script/setup.js'></script>
+	<script src='script/enemy.js'></script>
+	<script src='script/playerWorker.js'></script>
+	<script src='script/instruct.js'></script>
+	<script src='script/test/pfTest.js'></script>
+	<script src='script/test/roundTest.js'></script>
+	<script src='script/test/updateTest.js'></script>
+	<script src='script/mturk.js'></script>
+</head>
+
+<body>
+	<div id='main-box'>
+	<div id='game-box'>
+		<h1>Lightning Dodger v3.2</h1>
+
+		<!-- Status Box -->
+		<div id='stat-box'>
+
+			<div id='move-box' class='stat-div'>
+				<span id='move-txt'>Input</span>
+				<br>
+				<img class="move_arrow" id="up" style="display:none;" src="img/arrow-01.png">
+				<img class="move_arrow" id="right" style="display:none;" src="img/arrow-02.png">
+				<img class="move_arrow" id="down" style="display:none;" src="img/arrow-03.png">
+				<img class="move_arrow" id="left" style="display:none;" src="img/arrow-04.png">
+				<img class="move_arrow" id="stay" style="display:none;" src="img/arrow-05.png">
+			</div>
+
+			<div id='score-box' class='stat-div'>
+				<span id='score-txt'>Score</span>
+				<br>
+				<span id='pts-total'>0</span>
+			</div>
+
+			<div id='roundnum-box' class='stat-div'>
+				<span id='round-txt'>Round</span>
+				<br>
+				<span id='round-num'>-</span>
+			</div>
+
+		</div>
+
+		<!-- Alert Box -->
+		<div id='alert-box'>
+			<!-- Struck Alert -->
+			<div id='struck-alert'>
+				<img id="wrong" src="img/wrong.png">
+			</div>
+		</div>
+
+		<!-- Popup Box -->
+		<div id = 'popup-box'>
+			<!-- Messages that we want to popup are dynamically inserted here. -->
+		</div>
+
+		<!-- Game Map Box -->
+		<div id='map-box'>
+
+			<!-- Round count box -->
+			<div id='round-box'>
+				<!--Points Remaining: <span id='pts-round'></span>-->
+				Time Remaining
+				<div id='round-bar'></div>
+			</div>
+
+			<!-- Platform display -->
+			<div id='plat-box'></div>
+		</div>
+
+	</div>
+
+	<!-- Instruction Box -->
+	<div id='instr-box'>
+		<h1 id='instr-txt'>Instructions</h1>
+		<p id='load-txt'>Loading...</p>
+		<div id='task-complete' style='display:none;color:red;'>
+			IMPORTANT: Click Submit HIT to complete the task!
+			<form id="mturk_form"></form>
+	    	<button class="btn btn-default" id="submit_mturk">Submit HIT</button>
+    	</div>
+	</div>
+
+	</div>
+</body>
+
+</html>

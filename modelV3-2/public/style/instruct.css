@@ -1,0 +1,35 @@
+
+#popup-box {
+	text-align: center;
+	width: auto;
+	height: auto;
+	margin: 0px auto;
+	padding: 10px;
+	position: absolute;
+}
+
+.popup-msg {
+	display: none;
+	border: 1px solid blue;
+	padding: 5px;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	float: left;
+	border-radius: 10px;
+}
+
+#welcome-msg{
+	margin: auto;
+	display: inline-block;
+	position: relative;
+}
+
+#open-msg{
+}
+
+#fixed-msg{
+}
+
+#random-msg{
+}

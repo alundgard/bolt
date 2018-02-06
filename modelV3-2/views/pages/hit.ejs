@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- CSS -->
+	<link rel='stylesheet' href='style/style.css'>
+	<link rel='stylesheet' href='style/instruct.css'>
+
+	<!-- JavaScript -->
+	<% include ../partials/head %>
+	<script src='script/gup.js'></script>
+	<script src='script/hit.js'></script>
+</head>
+
+<body>
+	<div id='main-box'>
+
+	<!-- Instruction Box -->
+	<div id='instr-box'>
+		<div class='popup-msg' id='welcome-msg' style=''> 
+			<p>Welcome to Lightning Dodger!</p>
+			<img style='height:50x;width:80px' src='img/bolt.png'>
+			<img style='height:50x;width:80px' src='img/avatar.png'>
+			<p>The goal of this game is to dodge the lighning bolts.</p>
+			<p>You will play as the Dodger character.</p>
+			<p style='color:red;'>NOTE: Please only do this HIT once! If you have done this HIT before, your submission will be rejected.</p>
+		</div>
+
+    	<div id='mturk-accepted' style='display:none;'>HIT accepted.</div>
+      	<div id='mturk-not-accepted' style='display:none;'>HIT not yet accepted.</div>
+      	
+      	<div id='hideTask' style='display:none; color: red;'>You have already submitted this task once. Please return the HIT. Thank you.</div>
+	</div>
+
+	<!-- Preview Box -->
+	<div id='preview-box'>
+		<img style='max-width:100%;max-height:100%;' src='img/preview.gif'>
+	</div>
+
+	</div>
+</body>
+
+</html>
