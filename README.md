@@ -2,4 +2,4 @@
 
 Lookahead approach implementation on Lightning Dodger game. 
 
-Forthcoming.
+Forthcoming (CHI 2018).
