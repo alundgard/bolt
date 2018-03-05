@@ -69,7 +69,7 @@ app.use('/test', test);
 
 ROUND = {};
 SUBJECTS = {}
-MIN_NUM_CLIENTS = 5;
+MIN_NUM_CLIENTS = 1;
 
 /*==============================================================================
 	Helper / Debugging
